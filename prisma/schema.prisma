@@ -1,0 +1,54 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
+}
+
+datasource db {
+  provider             = "mysql"
+  url                  = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
+}
+
+model saveData {
+  id         Int    @id @default(autoincrement())
+  password   String @unique
+  wins       Int
+  highStreak Int
+  curStreak  Int
+  avail_poke Json
+}
+
+model Board {
+  id        Int      @id @default(autoincrement())
+  url       String   @unique
+  boardData Json?
+  turn      String
+  gameOver  Boolean?
+  winner    String?
+}
+
+model wikiScores {
+  id         Int      @id @default(autoincrement())
+  date       DateTime @default(now())
+  score      Int
+  categories String
+  name       String?
+  rounds     Int?
+}
+
+model adoURLs {
+  id         Int      @id @default(autoincrement())
+  url        String   @unique
+}
+
+model adoArticlesJP {
+  id         Int      @id @default(autoincrement())
+  url        String   @unique
+  data       Json
+}
+
+model adoArticlesEN {
+  id         Int      @id @default(autoincrement())
+  url        String   @unique
+  data       Json
+}
