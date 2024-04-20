@@ -8,7 +8,6 @@ import notifier from "node-notifier";
 
 async function main() {
     console.log("checking mail");
-    console.log("does it compile on save?");
 
     const gmail_urls = await gmail().catch((error) => {
         console.error("Delete token and Re-auth", error);
@@ -41,6 +40,6 @@ try {
     notifier.notify("Delete token and Re-auth");
 }
 
-setInterval(() => {
-    main();
-}, 1000 * 60 * 60 * 24);
+// setInterval(() => {
+//     main();
+// }, 1000 * 60 * 60 * 24);

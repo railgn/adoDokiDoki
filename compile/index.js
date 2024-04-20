@@ -37,7 +37,7 @@ try {
 catch {
     node_notifier_1.default.notify("Delete token and Re-auth");
 }
-setInterval(() => {
-    main();
-}, 1000 * 60 * 60 * 24);
+// setInterval(() => {
+//     main();
+// }, 1000 * 60 * 60 * 24);
 //# sourceMappingURL=index.js.map
