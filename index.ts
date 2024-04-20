@@ -8,6 +8,7 @@ import notifier from "node-notifier";
 
 async function main() {
     console.log("checking mail");
+    console.log("does it compile on save?");
 
     const gmail_urls = await gmail().catch((error) => {
         console.error("Delete token and Re-auth", error);

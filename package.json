@@ -9,7 +9,8 @@
         "index": "node --loader ts-node/esm ./index.ts",
         "discord": "node --loader ts-node/esm ./discord/discord_index.ts",
         "image": "node --loader ts-node/esm ./discord/image_download.ts",
-        "start": "node --loader ts-node/esm ./index.ts"
+        "start": "node --loader ts-node/esm ./index.ts",
+        "scrape": "node --loader ts-node/esm ./functions/scrape.ts"
     },
     "keywords": [],
     "author": "",

@@ -45,7 +45,7 @@ export async function scrape(urls: string[]) {
         try {
             const titleNode = await driver.findElement(By.css("h6"));
             resObj.title = await titleNode.getText();
-            // console.log("title: ", resObj.title);
+            console.log("title: ", resObj.title);
         } catch {
             console.log("Error on Title", url);
         }
@@ -97,7 +97,7 @@ export async function scrape(urls: string[]) {
 
         finalResObj[url] = resObj;
 
-        await driver.close();
+        // await driver.close();
     }
 
     async function main(urlArr: string[]) {
@@ -111,3 +111,7 @@ export async function scrape(urls: string[]) {
 
     return finalResObj;
 }
+
+// scrape([
+//     "https://ado-dokidokihimitsukichi-daigakuimo.com/articles/news/ar5edwQQUf4Ag5JizBrbFpMM",
+// ]);
