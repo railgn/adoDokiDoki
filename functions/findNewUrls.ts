@@ -1,4 +1,4 @@
-import adoURLs from "../database/adoURLs.json";
+import adoURLs from "C:/Users/aabou/Desktop/coding/adoDokiDoki/database/adoURLs.json";
 
 export async function findNewUrls(gmail_urls: string[]) {
     const gmail_hash: { [key: string]: number } = {};
@@ -12,6 +12,7 @@ export async function findNewUrls(gmail_urls: string[]) {
     Object.keys(gmail_hash).forEach((e) => {
         if (!(e in adoURLs)) {
             new_urls.push(e);
+            console.log(e);
         }
     });
 

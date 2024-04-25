@@ -13,7 +13,7 @@ async function postToDB(new_urls, articles_JP, articles_EN) {
     for (const url of new_urls) {
         adoURLsSave[url] = 0;
     }
-    promises_1.default.writeFile("./database/adoURLs.json", JSON.stringify(adoURLsSave));
+    promises_1.default.writeFile("C:/Users/aabou/Desktop/coding/adoDokiDoki/database/adoURLs.json", JSON.stringify(adoURLsSave));
     const adoArticlesJPSave = adoArticlesJP_json_1.default;
     for (const url in articles_JP) {
         adoArticlesJPSave[url] = articles_JP[url];

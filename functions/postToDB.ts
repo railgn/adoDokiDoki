@@ -13,7 +13,10 @@ export async function postToDB(
     for (const url of new_urls) {
         adoURLsSave[url] = 0;
     }
-    fs.writeFile("./database/adoURLs.json", JSON.stringify(adoURLsSave));
+    fs.writeFile(
+        "C:/Users/aabou/Desktop/coding/adoDokiDoki/database/adoURLs.json",
+        JSON.stringify(adoURLsSave)
+    );
 
     const adoArticlesJPSave: FinalResObj = adoArticlesJP;
     for (const url in articles_JP) {

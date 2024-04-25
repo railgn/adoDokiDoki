@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findNewUrls = void 0;
-const adoURLs_json_1 = __importDefault(require("../database/adoURLs.json"));
+const adoURLs_json_1 = __importDefault(require("C:/Users/aabou/Desktop/coding/adoDokiDoki/database/adoURLs.json"));
 async function findNewUrls(gmail_urls) {
     const gmail_hash = {};
     gmail_urls.forEach((e) => {
@@ -14,6 +14,7 @@ async function findNewUrls(gmail_urls) {
     Object.keys(gmail_hash).forEach((e) => {
         if (!(e in adoURLs_json_1.default)) {
             new_urls.push(e);
+            console.log(e);
         }
     });
     console.log("# of Gmail urls: ", Object.keys(gmail_hash).length);
