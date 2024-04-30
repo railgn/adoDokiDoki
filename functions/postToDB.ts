@@ -12,6 +12,7 @@ export async function postToDB(
     const adoURLsSave: { [key: string]: number } = adoURLs;
     for (const url of new_urls) {
         adoURLsSave[url] = 0;
+        console.log("saving url: ", url);
     }
     fs.writeFile(
         "C:/Users/aabou/Desktop/coding/adoDokiDoki/database/adoURLs.json",
