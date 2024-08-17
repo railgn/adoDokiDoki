@@ -32,7 +32,7 @@ async function scrape(urls) {
         try {
             const titleNode = await driver.findElement(By.css("h6"));
             resObj.title = await titleNode.getText();
-            console.log("title: ", resObj.title);
+            // console.log("title: ", resObj.title);
         }
         catch {
             console.log("Error on Title", url);
