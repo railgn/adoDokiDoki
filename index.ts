@@ -36,10 +36,12 @@ async function main() {
 
 try {
     main();
+    process.exit();
 } catch {
     notifier.notify("Delete token and Re-auth");
+    process.exit();
 }
 
-setInterval(() => {
-    main();
-}, 1000 * 60 * 60 * 24);
+// setInterval(() => {
+//     main();
+// }, 1000 * 60 * 60 * 24);

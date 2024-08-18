@@ -64,6 +64,7 @@ async function gmail() {
             return client;
         }
         client = await authenticate({
+            // access_type: "offline",
             scopes: SCOPES,
             keyfilePath: CREDENTIALS_PATH,
         });

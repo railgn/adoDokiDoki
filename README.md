@@ -9,3 +9,7 @@ To-do:
 -   Automate token deletion on auth failure
     OR
     Find a way to create a long-lived token
+
+https://developers.google.com/identity/protocols/oauth2/web-server#node.js_7
+
+add back @everyone

@@ -5,6 +5,7 @@ import path from "path";
 import fs from "fs/promises";
 
 export async function create_messages(url: string, article: ResObj) {
+    // const title = `${article.title}**\n*${article.date}\n${url}*\n\n`;
     const title = `@everyone**\n${article.title}**\n*${article.date}\n${url}*\n\n`;
 
     const text = article.text.join("\n");
