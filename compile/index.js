@@ -33,11 +33,13 @@ async function main() {
 }
 try {
     main();
+    process.exit();
 }
 catch {
     node_notifier_1.default.notify("Delete token and Re-auth");
+    process.exit();
 }
-setInterval(() => {
-    main();
-}, 1000 * 60 * 60 * 24);
+// setInterval(() => {
+//     main();
+// }, 1000 * 60 * 60 * 24);
 //# sourceMappingURL=index.js.map

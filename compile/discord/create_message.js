@@ -9,6 +9,7 @@ const process_1 = __importDefault(require("process"));
 const path_1 = __importDefault(require("path"));
 const promises_1 = __importDefault(require("fs/promises"));
 async function create_messages(url, article) {
+    // const title = `${article.title}**\n*${article.date}\n${url}*\n\n`;
     const title = `@everyone**\n${article.title}**\n*${article.date}\n${url}*\n\n`;
     const text = article.text.join("\n");
     let body = "";
